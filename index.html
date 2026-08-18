@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Srujan 🎂</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="loader">
+    <h1>🎁 Preparing Your Surprise...</h1>
+</div>
+
+<div id="countdown-page">
+
+    <h2>🎉 Birthday Countdown 🎉</h2>
+
+    <div id="countdown">
+        <div class="time-box">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+        </div>
+    </div>
+
+</div>
+
+<div id="birthday-page" class="hidden">
+
+<div class="floating-balloons">
+<span>🎈</span>
+<span>🎈</span>
+<span>🎈</span>
+<span>🎈</span>
+<span>🎈</span>
+</div>
+
+
+
+<h1 class="title">
+Happy Birthday
+</h1>
+
+<h2 class="name">
+Srujan ❤️
+</h2>
+
+<p class="message">
+
+May your life always be filled with happiness,
+love, success, peace and endless smiles.
+
+Every dream you have
+becomes reality.
+
+May God bless you today and always.
+
+With Lots of Love,
+
+<strong>Family ❤️</strong>
+
+</p>
+
+<div class="gift-section">
+
+<div id="gift-box">
+🎁
+</div>
+
+<p>Tap the Gift</p>
+
+</div>
+
+<div id="gift-message" class="hidden">
+
+<h2>🎉 Surprise 🎉</h2>
+
+<p>
+
+Today is all about celebrating YOU.
+
+Wishing you unlimited happiness,
+great health,
+lots of success,
+and beautiful memories.
+
+Happy Birthday Srujan ❤️
+
+</p>
+
+</div>
+
+<button id="musicBtn">
+🎵 Play Music
+</button>
+
+<audio id="birthdayMusic" loop>
+<source src="music/happy.mp3" type="audio/mpeg">
+
+<audio id="bgMusic" autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<canvas id="fireworks"></canvas>
+
+<footer>
+
+
+Made with ❤️ by Rakshith
+
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+window.addEventListener("load", () => {
+  const music = document.getElementById("bgMusic");
+  music.play().catch(() => {
+    document.body.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+  });
+});
+</script>
+
+</body>
+</html>
